@@ -1,4 +1,11 @@
 def issue_sentence(error_name: str, severity: int) -> str:
+    """Return a punishment string for a non-empty error name and severity 1–10.
+
+    Severity must be an integer, not a bool. Levels 1–3 receive a warning,
+    4–7 receive twice the severity in refactoring hours, and 8–10 receive
+    three times the severity in debugging hours. Custom error names work too.
+    Raise ValueError for invalid arguments. Surrounding name whitespace is removed.
+    """
     if not isinstance(error_name, str) or not error_name.strip():
         raise ValueError("error_name must be a non-empty string")
     if type(severity) is not int or not 1 <= severity <= 10:
