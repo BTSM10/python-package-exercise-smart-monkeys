@@ -1,6 +1,6 @@
 # Rubber Duck Courtroom
 
-[![Python Package CI](https://github.com/BTSM10/python-package-exercise-smart-monkeys/actions/workflows/ci.yml/badge.svg)](https://github.com/BTSM10/python-package-exercise-smart-monkeys/actions/workflows/ci.yml)
+[![Python Package CI](https://github.com/software-students-fall2026/python-package-exercise-smart-monkeys/actions/workflows/ci.yml/badge.svg)](https://github.com/software-students-fall2026/python-package-exercise-smart-monkeys/actions/workflows/ci.yml)
 
 A humorous Python package that puts programming errors on trial
 before a fictional rubber duck judge.
@@ -31,7 +31,7 @@ Install Git, Python, and Pipenv first.
 Clone the shared repository:
 
 ```bash
-git clone https://github.com/BTSM10/python-package-exercise-smart-monkeys.git
+git clone https://github.com/software-students-fall2026/python-package-exercise-smart-monkeys.git
 cd python-package-exercise-smart-monkeys
 ```
 
