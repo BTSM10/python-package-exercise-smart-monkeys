@@ -10,9 +10,9 @@ It does not inspect or fix code.
 
 ## Project status
 
-The package foundation and automated checks are being established.
-The five planned functions are not implemented yet.
-The package has not been published to PyPI.
+All five courtroom functions have been implemented, including their input validation and unit tests.
+The package supports filing charges, presenting evidence, calling witnesses, delivering verdicts, and issuing sentences.
+PyPI publication and final documentation updates are being completed.
 
 ## Planned functions
 
@@ -23,6 +23,158 @@ The package has not been published to PyPI.
 | call_witness(witness, mood) | Bereket |
 | deliver_verdict(error_name, severity) | Rwan |
 | issue_sentence(error_name, severity) | Abel |
+
+## API Documentation
+
+Rubber Duck Courtroom provides five functions for putting programming errors on trial. Each function accepts arguments and returns a humorous courtroom statement as a string.
+
+### 1. File a Charge
+
+**Function:** `file_charge(error_name, severity)`
+
+Creates a fictional charge against a programming error. The charge depends on the error name and severity.
+
+**Parameters:**
+- `error_name` (str): Non-empty error name.
+- `severity` (int): Integer from 1 to 10.
+
+**Severity levels:**
+- 1–3: Minor offence
+- 4–7: Misdemeanor
+- 8–10: Felony
+
+**Example:**
+
+```python
+from rubber_duck_courtroom.charges import file_charge
+
+print(file_charge("SyntaxError", 8))
+```
+
+**Output:**
+
+```text
+FELONY: SyntaxError is charged with violating the laws of Python grammar. Severity: 8/10.
+```
+
+### 2. Present Evidence
+
+**Function:** `present_evidence(error_name, occurrences)`
+
+Generates an evidence report describing how many times a programming error occurred.
+
+**Parameters:**
+- `error_name` (str): Non-empty error name.
+- `occurrences` (int): Non-negative integer.
+
+**Example:**
+
+```python
+from rubber_duck_courtroom.evidence import present_evidence
+
+print(present_evidence("TypeError", 3))
+```
+
+**Output:**
+
+```text
+Exhibit A: TypeError was spotted 3 times at the scene of the bug!
+```
+
+### 3. Call a Witness
+
+**Function:** `call_witness(witness, mood)`
+
+Generates a witness testimony based on the selected mood.
+
+**Parameters:**
+- `witness` (str): Non-empty witness name.
+- `mood` (str): "calm", "dramatic", or "sarcastic".
+
+**Example:**
+
+```python
+from rubber_duck_courtroom.witnesses import call_witness
+
+print(call_witness("GitHub", "calm"))
+```
+
+**Output:**
+
+```text
+GitHub calmly addresses the court: 'Your Honor, let us examine the evidence carefully.'
+```
+
+### 4. Deliver a Verdict
+
+**Function:** `deliver_verdict(error_name, severity)`
+
+Determines the guilt of a programming error based on its severity.
+
+**Parameters:**
+- `error_name` (str): Non-empty error name.
+- `severity` (int): Integer from 1 to 10.
+
+**Severity levels:**
+- 1–3: Warning
+- 4–7: Guilty
+- 8–10: Guilty with extreme prejudice
+
+**Example:**
+
+```python
+from rubber_duck_courtroom.verdicts import deliver_verdict
+
+print(deliver_verdict("SyntaxError", 8))
+```
+
+**Output:**
+
+```text
+GUILTY WITH EXTREME PREJUDICE! SyntaxError has terrorized the codebase.
+```
+
+### 5. Issue a Sentence
+
+**Function:** `issue_sentence(error_name, severity)`
+
+Assigns a humorous punishment to a programming error.
+
+**Parameters:**
+- `error_name` (str): Non-empty error name.
+- `severity` (int): Integer from 1 to 10.
+
+**Severity levels:**
+- 1–3: Formal warning
+- 4–7: Severity × 2 hours of refactoring
+- 8–10: Severity × 3 hours of debugging
+
+**Example:**
+
+```python
+from rubber_duck_courtroom.sentences import issue_sentence
+
+print(issue_sentence("SyntaxError", 8))
+```
+
+**Output:**
+
+```text
+SyntaxError is sentenced to 24 hours of supervised debugging!
+```
+
+### Error Handling
+
+All five functions raise `ValueError` when arguments are invalid.
+
+Examples of invalid inputs include:
+- Empty or whitespace-only error names and witness names
+- Severity values outside 1–10
+- Non-integer severity values, including booleans
+- Negative or non-integer occurrence counts
+- Unsupported witness moods
+
+Leading and trailing whitespace is removed from names. Witness moods are case-insensitive.
 
 ## Developer setup
 
