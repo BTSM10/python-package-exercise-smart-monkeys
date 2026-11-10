@@ -12,10 +12,10 @@ def test_dramatic_witness():
     assert "horrifying bug" in result
 
 
-def test_angry_witness():
-    result = call_witness("GitHub", "angry")
-    assert "GitHub slams the witness stand" in result
-    assert "I demand justice!" in result
+def test_calm_witness():
+    result = call_witness("GitHub", "calm")
+    assert "GitHub calmly addresses the court" in result
+    assert "examine the evidence carefully" in result
 
 
 def test_sarcastic_witness():
@@ -35,7 +35,7 @@ def test_invalid_witness(witness):
         call_witness(witness, "dramatic")
 
 
-@pytest.mark.parametrize("mood", ["", "happy", None, 123, True])
+@pytest.mark.parametrize("mood", ["", "happy", "angry", None, 123, True])
 def test_invalid_mood(mood):
     with pytest.raises(ValueError):
         call_witness("GitHub", mood)
