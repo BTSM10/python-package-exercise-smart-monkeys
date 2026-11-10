@@ -63,6 +63,18 @@ pipenv run python -m twine check dist/*
 These commands build and check the package locally.
 They do not publish it.
 
+## Complete demo
+
+After completing the developer setup, run:
+
+```bash
+pipenv run python examples/demo.py
+```
+
+The [example program](examples/demo.py) uses all five functions to show three
+complete trials. See the [sentencing and demo guide](docs/sentencing.md) for
+punishment rules, exact output examples and verification commands.
+
 ## Contributing
 
 1. Update your local main branch.
