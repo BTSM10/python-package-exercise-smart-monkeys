@@ -10,7 +10,9 @@ It does not inspect or fix code.
 
 ## Installation
 
-Install Rubber Duck Courtroom from PyPI:
+Rubber Duck Courtroom is available on [PyPI](https://pypi.org/project/rubber-duck-courtroom/0.1.0/).
+
+Install it using:
 
 ```bash
 python -m pip install rubber-duck-courtroom
