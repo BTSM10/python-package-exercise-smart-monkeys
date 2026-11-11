@@ -82,13 +82,44 @@ call_witness("GitHub", "calm")
 
 The function returned the expected courtroom testimony.
 
+
 ## 7. Findings
 
-No failures were detected in the checks completed so far.
+No failures were detected during the initial QA checks.
 
 The wheel and source distribution both installed successfully in isolated environments.
 
-These results provide initial confidence in the package's build and installation processes but do not constitute complete release verification.
+### Integration Test Coverage Regression
+
+After merging the latest main branch, the test count decreased from 126 to 121.
+
+Investigation revealed that five parameterized tests from `tests/test_public_api.py` were missing.
+
+The five tests were restored while preserving the existing public API tests.
+
+**Final verification:**
+- 126 tests passed
+- 0 failures
+- Public API test coverage restored
+
+These results provide confidence in the package's functionality and installation process. However, final release verification remains pending until PyPI publication.
+
+### Post-Integration Verification Results
+
+After integrating the latest main branch:
+
+- Automated test suite: 126 passed, 0 failed.
+- Package build: wheel and source distribution built successfully.
+- Twine validation: both distributions passed.
+- Installation smoke tests: both wheel and source distribution passed in isolated environments.
+- Courtroom demo: all three example cases executed successfully.
+- Documentation doctest: 5 passed, 0 failed.
+
+No failures were detected during these final local checks.
+
+GitHub Actions verification and installation from the
+published PyPI package remain pending.
+
 
 ## 8. Remaining Final QA
 
