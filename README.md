@@ -5,16 +5,50 @@
 A humorous Python package that puts programming errors on trial
 before a fictional rubber duck judge.
 
-The package will generate courtroom statements from supplied arguments.
+The package generates courtroom statements from supplied arguments.
 It does not inspect or fix code.
+
+## Installation
+
+Install Rubber Duck Courtroom from PyPI:
+
+```bash
+python -m pip install rubber-duck-courtroom
+```
+
+The package generates humorous courtroom statements from developer-supplied arguments.
+
+## Quick Start
+
+```python
+from rubber_duck_courtroom import (
+    file_charge,
+    present_evidence,
+    call_witness,
+    deliver_verdict,
+    issue_sentence,
+)
+
+error = "SyntaxError"
+severity = 8
+
+print(file_charge(error, severity))
+print(present_evidence(error, 3))
+print(call_witness("Compiler", "dramatic"))
+print(deliver_verdict(error, severity))
+print(issue_sentence(error, severity))
+```
+
+Each function returns a string. Invalid arguments raise ValueError.
+
+For a complete demonstration, see [examples/demo.py](examples/demo.py).
 
 ## Project status
 
 All five courtroom functions have been implemented, including their input validation and unit tests.
 The package supports filing charges, presenting evidence, calling witnesses, delivering verdicts, and issuing sentences.
-PyPI publication and final documentation updates are being completed.
 
-## Planned functions
+## Available functions
 
 | Function | Owner |
 |---|---|
@@ -241,10 +275,10 @@ punishment rules, exact output examples and verification commands.
 
 No database, external API, or runtime secrets are required.
 
-## Before final submission
+## Contributors
 
-- Implement and test all five functions.
-- Add complete function documentation and usage examples.
-- Add an example program demonstrating all five functions.
-- Link all teammates to their GitHub profiles.
-- Publish to PyPI and add the package link and installation instructions.
+- [Rayyan](https://github.com/RayyanAhmed21) - Charges and package integration
+- [Biniam](https://github.com/BTSM10) - Project setup, CI, and evidence
+- [Bereket](https://github.com/Bereket-454) - Witnesses and quality assurance
+- [Rwan](https://github.com/rz3007) - Verdicts and documentation
+- [Abel](https://github.com/Abel200595) - Sentences and example program
